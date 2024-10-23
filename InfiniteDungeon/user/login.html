@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Infinite Dungeon - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    
+   
+    <style>
+       
+        .login-container {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+            background: rgba(0, 0, 50, 0.8); 
+        }
+
+        
+        .login-container {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <video autoplay muted loop class="background-video">
+        <source src="../assets/videos/1st.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    
+    <div class="login-container">
+        <img src="../assets/images/logo.png" alt="Logo">
+        <h1>The Infinite Dungeon</h1>
+        <input type="text" placeholder="Gmail">
+        <input type="password" placeholder="Password">
+        <button class="login-button" onclick="window.location.href='../Game/main.html'">Log In</button>
+        <br>
+        <a href="type.html">Sign up</a>
+    </div>
+
+</body>
+</html>

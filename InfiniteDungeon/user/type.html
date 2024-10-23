@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Infinite Dungeon - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+
+    <style>
+        .login-container {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+            background: rgba(0, 0, 50, 0.8); 
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px; /* Added max-width for better control */
+            margin: auto; /* Center the container */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .social-button {
+            margin: 15px;
+            padding: 1px 20px;
+            border: none;
+            border-radius: 5px;
+            /* position: relative;
+            left: 120px; */
+            cursor: pointer;
+            font-size: 16px;
+            display: flex; /* Align text and image */
+            align-items: center; /* Center vertically */
+        }
+
+        .social-button1 {
+            margin: 15px;
+            padding: 1px 20px;
+            border: none;
+            border-radius: 5px;
+            /* position: relative;
+            left: 120px; */
+            cursor: pointer;
+            font-size: 20px;
+            display: flex; 
+            align-items: center;
+        }
+
+        .google {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+        margin-left: 80px;
+        }
+
+        .facebook {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            margin-left: 70px;
+        }
+
+        img {
+            width: 25px; /* Standard size for logos */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop class="background-video">
+        <source src="../assets/videos/1st.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="login-container">
+        <img src="../assets/images/logo.png" alt="Logo">
+        <h1>The Infinite Dungeon</h1>
+
+        <button class="social-button google" onclick="handleGoogleLogin()">
+            <img src="../assets/images/google.png" alt="Google Logo" style="width: 25px; margin-top: 17px; margin-right: 15px; vertical-align: middle;">
+            Log In with Google
+        </button>
+        
+        <button class="social-button facebook" onclick="handleFacebookLogin()">
+            <img src="../assets/images/facebook.png" alt="Facebook Logo" style="width: 25px; margin-top: 17px; margin-right: 15px; vertical-align: middle;">
+            Log In with Facebook
+        </button>
+        
+        <br>
+        <button class="social-button1" onclick="window.location.href='email-login.html'" style="margin-left: 100px;">Log In via Email</button>
+    </div>
+
+    <script>
+        function handleGoogleLogin() {
+            gapi.load('auth2', function() {
+                gapi.auth2.init({
+                    client_id: '68102315240-7k5e68q48ipme0up61fu54gbdi8nsuga.apps.googleusercontent.com'
+                }).then(function (auth2) {
+                    auth2.signIn().then(onSignIn, onFailure);
+                });
+            });
+        }
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+
+            // Redirect to the dashboard or another page
+            window.location.href = 'https://infinite-dungeon.netlify.app/dashboard';
+        }
+
+        function onFailure(error) {
+            console.error(error);
+        }
+    </script>
+
+</body>
+</html>
