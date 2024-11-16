@@ -1,0 +1,93 @@
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #bbada0;
+  }
+  
+  #game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 400px;
+    height: 400px;
+    background-color: #bbada0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #cdc1b4;
+    border-radius: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #776e65;
+  }
+  
+  .tile-2 {
+    background-color: #eee4da;
+  }
+  
+  .tile-4 {
+    background-color: #ede0c8;
+  }
+  
+  .tile-8 {
+    background-color: #f3b27a;
+  }
+  
+  .tile-16 {
+    background-color: #f69664;
+  }
+  
+  .tile-32 {
+    background-color: #f77c5f;
+  }
+  
+  .tile-64 {
+    background-color: #f75f3b;
+  }
+  
+  .tile-128 {
+    background-color: #f2d86c;
+  }
+  
+  .tile-256 {
+    background-color: #f2c464;
+  }
+  
+  .tile-512 {
+    background-color: #f2a64c;
+  }
+  
+  .tile-1024 {
+    background-color: #f2975a;
+  }
+  
+  .tile-2048 {
+    background-color: #f2795a;
+  }
+  .tile-4096, .tile-8192, .tile-16384 {
+    background-color: #2e8b57;  /* Forest Green color */
+    color: #ffffff;  /* White text color for better contrast */
+}
+
+  
+  #game-info {
+    margin-top: 20px;
+  }
+  
+  #new-game-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  

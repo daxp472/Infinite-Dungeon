@@ -24,6 +24,36 @@
     background-position: 50% 50%;
   }
   
+  .rectangle{
+    display: flex;
+
+  }
+  .icon-2048{
+    margin-top: 45px;
+    margin-left: 40px;
+  }
+  .title-2048{
+    font-size: xx-large;
+    gap: 30px;
+    margin-top: 40px;
+    margin-left: 35px;
+  }
+
+
+  .rectangle-3{
+    display: flex;
+
+  }
+  .icon-xo{
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+  .title-xo{
+    font-size: xx-large;
+    margin-top: 30px;
+    margin-left: 35px;
+  }
+
   .desktop .rectangle {
     position: absolute;
     width: 793px;
@@ -338,4 +368,47 @@
   }
   
 
-  
+  /* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  height: 100%;
+  width: 250px;
+  background-color: #111;
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease; /* Smooth sliding effect */
+  z-index: 1000;
+  padding-top: 20px;
+}
+
+/* Sidebar items */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect for sidebar items */
+.sidebar ul li:hover {
+  background-color: #575757;
+  color: #00ff80;
+}
+
+/* Show the sidebar when hovering over the menu icon */
+.desktop:hover .sidebar {
+  left: 0; /* Slide in the sidebar */
+}
+
+/* Hide sidebar when mouse leaves the menu area */
+.desktop:hover .sidebar:not(:hover) {
+  left: -250px; /* Slide out */
+}
