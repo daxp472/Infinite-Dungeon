@@ -69,6 +69,7 @@ function moveLeft() {
         gameGrid[i] = mergeRow(gameGrid[i]);
     }
     spawnNumber();
+    updateGrid();
 }
 
 function moveRight() {
@@ -76,6 +77,7 @@ function moveRight() {
         gameGrid[i] = mergeRow(gameGrid[i].reverse()).reverse();
     }
     spawnNumber();
+    updateGrid();
 }
 
 function moveUp() {
@@ -87,22 +89,20 @@ function moveUp() {
         }
     }
     spawnNumber();
+    updateGrid();
 }
 
 function moveDown() {
     for (let j = 0; j < 4; j++) {
         let column = [gameGrid[3][j], gameGrid[2][j], gameGrid[1][j], gameGrid[0][j]];
-
         column = mergeRow(column).reverse();
         for (let i = 0; i < 4; i++) {
             gameGrid[i][j] = column[i];
         }
     }
-
     spawnNumber();
     updateGrid();
 }
-
 
 document.addEventListener('keydown', (e) => {
     switch (e.key) {
@@ -118,6 +118,36 @@ document.addEventListener('keydown', (e) => {
         case 'ArrowRight':
             moveRight();
             break;
+    }
+});
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+document.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchend', (e) => {
+    let touchEndX = e.changedTouches[0].clientX;
+    let touchEndY = e.changedTouches[0].clientY;
+
+    let diffX = touchEndX - touchStartX;
+    let diffY = touchEndY - touchStartY;
+
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX > 0) {
+            moveRight();
+        } else {
+            moveLeft();
+        }
+    } else {
+        if (diffY > 0) {
+            moveDown();
+        } else {
+            moveUp();
+        }
     }
 });
 

@@ -1,0 +1,106 @@
+/* Base Styles (Already present) */
+
+/* Advanced Styles Start Here */
+
+/* Example: Smooth Background Fade Transition */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Hover Effect on Buttons */
+button:hover {
+    background-color: #ff7e5f; /* Gradient hover color */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Smooth Fade-In Animation for Images in Gallery */
+.image-gallery img {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Adding Hover Effects for Navigation Links */
+nav ul li a:hover {
+    color: #ff7e5f; /* Hover color for nav links */
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Advanced Gallery Hover Effects */
+.image-gallery img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Smooth Scrolling for the Whole Page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add an Animation to the Banner Heading */
+.banner h1 {
+    animation: slideInFromTop 1s ease-out;
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Floating Buttons (Call-to-action button with animation) */
+.play-btn {
+    position: relative;
+    animation: floatUpDown 2s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Section Scroll Animations */
+.explore-section {
+    opacity: 0;
+    animation: fadeInSection 1.5s forwards;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Custom Hover for Logo */
+.logo img:hover {
+    transform: rotate(360deg);
+    transition: transform 1s ease-in-out;
+}

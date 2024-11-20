@@ -3,8 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Play</title>
+    <title>How to Play - The Infinite Dungeon</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Advanced CSS for a more polished look */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 10px 20px;
+            color: white;
+        }
+        
+        header .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+        }
+
+        .user img {
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #d81111;
+            margin-top: 20px;
+        }
+
+        .how-to-play-section {
+            background-color: #fff;
+            opacity: 85%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .how-to-play-section h2 {
+            color: #444;
+            font-size: 2rem;
+        }
+
+        .how-to-play-section p {
+            line-height: 1.6;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .how-to-play-step {
+            background-color: #f2f2f2;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .how-to-play-step h3 {
+            font-size: 1.4rem;
+            color: #222;
+        }
+
+        .how-to-play-step p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #d81111;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,67 +135,49 @@
             <span>Username</span>
             <img src="assets/images/user.png" alt="User Icon" width="50" height="50">
         </div>
-        
     </header>
-    <h1 style="display: flex; justify-content: center;"></h1>
+
+    <h1>How to Play The Infinite Dungeon</h1>
+    
     <main>
-        <section class="instructions">
-            <h2>Basic Controls</h2>
-            <ul>
-                <li><strong>Movement:</strong> Use <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd> to move</li>
-                <li><strong>Interact:</strong> Press <kbd>E</kbd> to interact with objects</li>
-                <li><strong>Attack:</strong> Left click to attack enemies</li>
-                <li><strong>Jump:</strong> Press <kbd>Space</kbd> to jump</li>
-                <li><strong>Inventory:</strong> Press <kbd>I</kbd> to access your items</li>
-            </ul>
-        </section>
-        <section class="game-objectives">
-            <h2>Game Objectives</h2>
-            <p>In this game, you will navigate through various challenges and puzzles. Here are the key goals:</p>
-            <ul>
-                <li>Solve puzzles to unlock doors and progress to the next level</li>
-                <li>Collect items to aid in your journey</li>
-                <li>Avoid or defeat enemies (coming soon)</li>
-            </ul>
+        <section class="how-to-play-section">
+            <h2>Getting Started</h2>
+            <p>Welcome to <strong>The Infinite Dungeon</strong>. Here, you'll embark on a thrilling adventure filled with puzzles, secrets, and dangers at every turn. Follow the steps below to start your journey:</p>
+
+            <div class="how-to-play-step">
+                <h3>Step 1: Create Your Character</h3>
+                <p>Before you begin, you'll need to create your character. Customize their appearance and choose their background. The choices you make will affect your gameplay experience.</p>
+            </div>
+
+            <div class="how-to-play-step">
+                <h3>Step 2: Learn the Basics</h3>
+                <p>Once you're in the game, take a moment to familiarize yourself with the controls. Explore your surroundings and try to solve your first simple puzzle. Don't worry if you fail – this is all part of the learning process!</p>
+            </div>
+
+            <div class="how-to-play-step">
+                <h3>Step 3: Solve Puzzles</h3>
+                <p>Each dungeon is filled with challenging puzzles. You'll need to think critically and use your environment to solve them. Keep an eye out for clues and hidden items that may help you progress.</p>
+            </div>
+
+            <div class="how-to-play-step">
+                <h3>Step 4: Survive the Dungeon</h3>
+                <p>The dungeon is filled with traps and enemies that will test your abilities. Be strategic in your decisions and always be prepared for the unexpected. The deeper you go, the more dangerous it becomes.</p>
+            </div>
+
+            <div class="how-to-play-step">
+                <h3>Step 5: Unlock New Abilities</h3>
+                <p>As you advance through the levels, you'll unlock new abilities and resources that will help you tackle tougher challenges. Make sure to explore every corner of the dungeon to find upgrades and treasures.</p>
+            </div>
+
+            <div class="how-to-play-step">
+                <h3>Step 6: Escape the Dungeon</h3>
+                <p>Your ultimate goal is to escape the dungeon. Each dungeon has its own end, but the journey may vary depending on your choices and actions. Can you outsmart the dungeon and escape unscathed?</p>
+            </div>
         </section>
     </main>
+
     <footer>
-        <div class="footer-links">
-            <div class="explore">
-                <h3>Explorer</h3>
-                <ul>
-                    <li><a href="#">Gameplay</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="about">
-                <h3>About</h3>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Development Team</a></li>
-                    <li><a href="#">Press Kit</a></li>
-                </ul>
-            </div>
-            <div class="connect">
-                <h3>Connect</h3>
-                <ul>
-                    <li><a href="#">Follow Us on Social</a></li>
-                    <li><a href="#">Join Our Discord</a></li>
-                    <li><a href="#">Newsletter Signup</a></li>
-                </ul>
-            </div>
-            <div class="legal">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Community Guidelines</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-        </div>
-        <div style="display: flex; justify-content: center;"> &copy; 2024 Game Platform | <a href="contact.html">Contact Us</a></div>
+        <p>&copy; 2024 Game Platform | <a href="contact.html">Contact Us</a></p>
     </footer>
 </body>
 </html>

@@ -5,42 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="advanced-styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
     <title>The Infinite Dungeon</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        .gallery-item h3{
-            font-size: 30px;
-
-        }
-
-        .top p{
-            margin-left: 150px;
-            margin-right: 150px;
-            margin-top: 50px;
-            font-size: 22px;
-        }
-        .top{
-            margin-bottom: 150px;
-        }
-    </style>
 </head>
 
 <body>
 
+    <!-- Required Scripts -->
     <script src="libs/phaser.min.js"></script>
     <script src="script.js"></script>
 
+    <!-- Header -->
     <header>
         <div class="logo">
             <img src="assets/images/logo.png" alt="Game Logo" width="70" height="70">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="how-to-play.html">How to Play</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -52,24 +35,25 @@
         </div>
     </header>
 
+    <!-- Main Section -->
     <main>
+        <!-- Hero Banner -->
         <div class="banner">
-            <h1 style="font-family: Cinzel;">The Infinite Dungeon</h1>
-            <a href="./user/login.html" class="play-btn">Play</a>
+            <h1>Welcome to <span>The Infinite Dungeon</span></h1>
+            <a href="./user/login.html" class="play-btn">Play Now</a>
         </div>
 
+        <!-- Explore Section -->
         <section class="explore-section">
-            <div class="top">
-                <h2>Explore the Infinite Dungeon!</h2>
-                <p>Dive into an ever-changing world filled with adventure and mystery. Each level presents unique
-                    challenges, enemies, and puzzles that will test your skills. Will you uncover the secrets of the
-                    dungeon, or will you be lost to its depths?</p>
-            </div>
+            <h2>Explore the Infinite Dungeon!</h2>
+            <p>Dive into an ever-changing world filled with adventure and mystery. Each level presents unique challenges, enemies, and puzzles that will test your skills. Will you uncover the secrets of the dungeon, or will you be lost to its depths?</p>
+
             <div class="image-gallery">
+                <!-- Gallery Items -->
                 <div class="gallery-item">
                     <img src="assets/images/dungeon1.jpeg" alt="Dungeon Image 1">
                     <h3>Modern Era</h3>
-                    <p>Explore the hustling metropolis of the future. Technology reigns supreme, but hidden dangers lie beneath the surface.</p>
+                    <p>Explore the bustling metropolis of the future. Technology reigns supreme, but hidden dangers lie beneath the surface.</p>
                 </div>
                 <div class="gallery-item">
                     <img src="assets/images/dungeon2.jpeg" alt="Dungeon Image 2">
@@ -86,30 +70,25 @@
                     <h3>Ruins of Eternity</h3>
                     <p>Signifies ancient ruins that have stood the test of time, with an eternal, almost otherworldly presence.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="assets/images/dungeon5.jpeg" alt="Dungeon Image 5">
-                    <h3>Ruins of Eternity</h3>
-                    <p>Signifies ancient ruins that have stood the test of time, with an eternal, almost otherworldly presence.</p>
-                </div>
             </div>
         </section>
     </main>
 
-    <div id="about-section" class="section" style="display: none;">
-        <h2>About The Infinite Dungeon</h2>
-        <p>The Infinite Dungeon is a puzzle-adventure game with rich content and ever-evolving challenges.</p>
-    </div>
 
+
+    <!-- Footer -->
     <footer>
         <div class="footer-links">
+            <!-- Explore Section -->
             <div class="explore">
-                <h3>Explorer</h3>
+                <h3>Explore</h3>
                 <ul>
                     <li><a href="#">Gameplay</a></li>
                     <li><a href="#">Features</a></li>
-                    <li><a href="#">Community Support</a></li>
+                    <li><a href="#">Community</a></li>
                 </ul>
             </div>
+            <!-- About Section -->
             <div class="about">
                 <h3>About</h3>
                 <ul>
@@ -118,14 +97,16 @@
                     <li><a href="#">Press Kit</a></li>
                 </ul>
             </div>
+            <!-- Connect Section -->
             <div class="connect">
                 <h3>Connect</h3>
                 <ul>
-                    <li><a href="#">Follow Us on Social</a></li>
-                    <li><a href="#">Join Our Discord</a></li>
+                    <li><a href="#">Follow Us</a></li>
+                    <li><a href="#">Join Discord</a></li>
                     <li><a href="#">Newsletter Signup</a></li>
                 </ul>
             </div>
+            <!-- Legal Section -->
             <div class="legal">
                 <h3>Legal</h3>
                 <ul>
@@ -136,7 +117,9 @@
             </div>
         </div>
 
-        <div style="display: flex; justify-content: center;"> &copy; 2024 Game Platform | <a href="contact.html">Contact Us</a></div>
+        <div class="footer-bottom" style="text-align: center;"> 
+            &copy; 2024 Game Platform | <a href="contact.html">Contact Us</a>
+        </div>
     </footer>
 
 </body>
