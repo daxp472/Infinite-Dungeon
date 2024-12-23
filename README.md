@@ -4,7 +4,7 @@
 
 Infinite Dungeon is an immersive puzzle adventure game set in a dystopian future. Players navigate endless mazes, solve intricate puzzles, and uncover hidden secrets while exploring a dynamic 3D world. The game offers escalating challenges, multiple environments, and exciting rewards for skillful navigation and problem-solving.  
 
-🎮 **[Play Infinite Dungeon here!](https://infinite-dungeon.netlify.app/)**  
+🎮 **[Play Infinite Dungeon here!](https://infinite-dungeon-3.netlify.app/)**  
 
 ---
 
