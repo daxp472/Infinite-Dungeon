@@ -66,3 +66,11 @@ function hitEnemy(player, enemy) {
 
     enemy.setPosition(700, 450);  // Reset enemy position after hit
 }
+
+var main = document.querySelector('#main');
+var crsr = document.querySelector('.cursor');
+
+main.addEventListener('mousemove', function(dets) {
+    crsr.style.left = dets.X + 'px';
+    crsr.style.top = dets.Y + 'px';
+});
